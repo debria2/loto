@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <form method="post" action="index.php">
+        <label for="numeros">Escolha até 25 números:</label><br>
+        <select id="numeros" name="numeros[]" multiple="multiple" size="10">
+            <?php
+            // Loop para gerar opções de 1 a 50
+            for ($i = 1; $i <= 50; $i++) {
+                echo "<option value='$i'>$i</option>";
+            }
+            ?>
+        </select><br><br>
+        <label for="valor">Informe o valor da aposta:</label><br>
+        <input type="number" id="valor" name="valor" min="0"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    
+</head>
+<body>
+    
+</body>
+</html>
